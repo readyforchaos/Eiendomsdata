@@ -111,7 +111,14 @@ document.getElementById("btnGetAddress").onclick = function getData() {
 
                 txtResponseProperty.innerHTML = "The following is the response from eiendomspriser (grunnboka):"
 
-                L.marker([property.Coordinate.Lat, property.Coordinate.Lon]).addTo(map) // Add geoloc to map with marker
+                var houseIcon = L.icon({
+                    iconUrl: './img/house.png',
+                    iconSize: [54, 64],
+                    iconAnchor: [22, 94],
+                    popupAnchor: [-3, -76]
+                });
+
+                L.marker([property.Coordinate.Lat, property.Coordinate.Lon], { icon: houseIcon }).addTo(map) // Add geoloc to map with marker
                     .bindPopup(property.Title + "<br>Tinglyst: " + property.SoldDate + "<br>Solgt for kr: " + property.PriceF + "<br>Kjøpere: " + property.To)
                     .openPopup();
 
