@@ -2,11 +2,12 @@
 <head>
   <meta charset="utf-8">
 
-  <title>Solg-case</title>
+  <title>Solgt-case</title>
   <meta name="description" content="Solgt case">
   <meta name="author" content="Anders Gill">
 
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
 
 </head>
 
@@ -14,8 +15,7 @@
     <h1>Søk igjennom kartverkets matrikkel</h1>
     <div id="divSearch">
         <input type="search" id="searchInput" name="search">       
-        <input id="btnGetAddress" type="button" value="Search in matrikkel" onclick="getAddress();" />
-        <input id="btnGetProperty" type="button" value="Search in eiendomspriser" onclick="getProperty();" />
+        <input id="btnGetAddress" type="button" value="Search in matrikkel" onclick="getData();" />
     </div>
     <div id="divResponse">
       <h3 id="txtResponse"></h3>
@@ -23,11 +23,15 @@
     </div>
     <br />
     <hr >
+    <div id="map">
+    </div>
+    <hr >
     <br />
     <div id="divResponseProperty">
       <h3 id="txtResponseProperty"></h3>
       <ul id="propertyList"></ul>
-  </div>
+    </div>
+  <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>
