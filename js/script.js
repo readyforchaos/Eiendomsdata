@@ -14,10 +14,15 @@ document.getElementById("btnGetAddress").onclick = function getAddress() {
       };
       
       const ul = document.getElementById('addressList')
-      fetch("https://ws.geonorge.no/adresser/v1/sok?adressenavn=harbitzalléen&nummer=18", requestOptions)
+      const textResponse = document.getElementById("txtResponse")
+      var input = document.getElementById("searchInput").value
+      console.log("Inserted value: ", input)
+      ul.innerHTML = "";
+      fetch("https://ws.geonorge.no/adresser/v1/sok?sok="+ input, requestOptions)
         .then(response => response.json())
         .then(function(data) {
             let adresser = data.adresser;
+            txtResponse.innerHTML = "The following is the response from matrikkelen (kartverket):"
             return adresser.map(function(adresse) {
                 let li = createNode('li'),
                 span = createNode('span');
