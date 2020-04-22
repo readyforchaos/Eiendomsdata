@@ -1,0 +1,42 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Solgt-case</title>
+    <meta name="description" content="Solgt case">
+    <meta name="author" content="Anders Gill">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="header">
+        <h2>Søk igjennom kartverkets matrikkel og Grunnboka via Eiendomspriser</h1>
+            <div id="divSearch">
+                <input type="search" placeholder="Adresse ..." id="searchInput" name="search">
+                <button id="btnGetAddress" type="button" value="Super search" onclick="getData();"><i class="fa fa-search"></i></button>
+            </div>
+    </div>
+
+    <div id="divResponse">
+        <h3 id="txtResponse"></h3>
+        <ul id="addressList"></ul>
+    </div>
+    <br />
+    <hr>
+    <div id="map">
+    </div>
+    <hr>
+    <br />
+    <div id="divResponseProperty">
+        <h3 id="txtResponseProperty"></h3>
+        <ul id="propertyList"></ul>
+    </div>
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
