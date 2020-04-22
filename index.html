@@ -11,13 +11,15 @@
 </head>
 
 <body>
-    <h1>Hello world!</h1>
-    <h2>Skriv inn adresse for å søke:</h2>
-    <br />
-    <input type="search" id="searchInput" name="search">       
-    <input id="btnGetAddress" type="button" value="btnAddress" onclick="getAddress();" />
-    <h3 id="txtResponse"></h3>
-    <ul id="addressList"></ul>
+    <h1>Søk igjennom kartverkets matrikkel</h1>
+    <div id="divSearch">
+        <input type="search" id="searchInput" name="search">       
+        <input id="btnGetAddress" type="button" value="btnAddress" onclick="getAddress();" />
+    </div>
+    <div id="divResponse">
+        <h3 id="txtResponse"></h3>
+        <ul id="addressList"></ul>
+    </div>
   <script src="js/script.js"></script>
 </body>
 </html>

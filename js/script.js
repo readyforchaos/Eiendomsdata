@@ -14,7 +14,6 @@ document.getElementById("btnGetAddress").onclick = function getAddress() {
       };
       
       const ul = document.getElementById('addressList')
-      const textResponse = document.getElementById("txtResponse")
       var input = document.getElementById("searchInput").value
       console.log("Inserted value: ", input)
       ul.innerHTML = "";
