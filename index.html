@@ -14,12 +14,20 @@
     <h1>Søk igjennom kartverkets matrikkel</h1>
     <div id="divSearch">
         <input type="search" id="searchInput" name="search">       
-        <input id="btnGetAddress" type="button" value="btnAddress" onclick="getAddress();" />
+        <input id="btnGetAddress" type="button" value="Search in matrikkel" onclick="getAddress();" />
+        <input id="btnGetProperty" type="button" value="Search in eiendomspriser" onclick="getProperty();" />
     </div>
     <div id="divResponse">
-        <h3 id="txtResponse"></h3>
-        <ul id="addressList"></ul>
+      <h3 id="txtResponse"></h3>
+      <ul id="addressList"></ul>
     </div>
+    <br />
+    <hr >
+    <br />
+    <div id="divResponseProperty">
+      <h3 id="txtResponseProperty"></h3>
+      <ul id="propertyList"></ul>
+  </div>
   <script src="js/script.js"></script>
 </body>
 </html>
